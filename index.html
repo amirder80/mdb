@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Material Design for Bootstrap</title>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <script type="module" crossorigin src="assets/index.js"></script>
+    <link rel="stylesheet" href="assets/index.css">
+  </head>
+  <body>
+    <!-- Start your project here-->
+
+
+
+
+    <div class="wrapper container-fluid pb-5">
+
+      <section class="container">
+
+        <div class="col-12">
+
+          <!-- Navbar -->
+          <nav class="menu navbar navbar-expand-md shadow-0">
+            <!-- Container wrapper -->
+
+              <!-- Navbar brand -->
+              <a class="navbar-brand  me-2" href="#">
+                <img
+                  class="img-fluid w-100 "
+                  src="data:image/png;base64,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"
+                  alt="MDB Logo"
+                  loading="lazy"
+                  style="margin-top: -1px;height: 50px"
+                />
+              </a>
+
+              <!-- Toggle button -->
+              <button
+                data-mdb-collapse-init
+                class="navbar-toggler btn-close-white"
+                type="button"
+                data-mdb-target="#navbarButtonsExample"
+                aria-controls="navbarButtonsExample"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <i class="fas fa-bars" style="color: white"></i>
+              </button>
+
+              <!-- Collapsible wrapper -->
+              <div class="collapse justify-content-end navbar-collapse" id="navbarButtonsExample">
+
+                <!-- Left links -->
+
+                <div class="d-flex align-items-end flex-column flex-md-row column-gap-md-3 align-items-md-center mt-md-0 row-gap-3 mt-4">
+                  <a href="tel:+86852346000" class="text-white ">
+                    +86 852 346 000
+                  </a>
+                  <a href="#" data-mdb-ripple-init  class="reserve btn btn-outline-light ">
+                    Reservations
+                  </a>
+
+
+                </div>
+              </div>
+              <!-- Collapsible wrapper -->
+
+            <!-- Container wrapper -->
+          </nav>
+          <!-- Navbar -->
+
+        </div>
+
+
+      </section>
+
+      <section class="container mt-5">
+
+        <div class="row align-items-start">
+
+          <div class="col-12 col-lg-6">
+
+            <h1 class="text-white fw-bold" style="font-size: 90px">
+              Healthy Eating
+              is important
+              part of lifestyle
+            </h1>
+
+            <p class="text-white mt-5 col-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque congue arcu</p>
+
+
+          </div>
+
+
+          <div class="col-12 mt-3 col-lg-5 offset-lg-1 mt-lg-0">
+
+            <img src="assets/dish.png" class="img-fluid w-100 " style="height: 500px" alt="">
+            
+          </div>
+
+        </div>
+
+      </section>
+
+      <section class="container mt-5">
+
+        <div class="row">
+
+          <div class="col-md-6">
+
+            <div class="col-12">
+
+              <img src="assets/dish2.png" class="img-fluid w-100" alt="">
+
+            </div>
+
+            <h2 class="text-white mt-5 h1 fw-bold col-8" style="font-size: 50px">Start to plan your diet today</h2>
+
+            <p class="text-white mt-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque congue arcu</p>
+
+          </div>
+
+          <div class="col-md-4 offset-md-2">
+
+            <p class="text-white ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque congue arcu</p>
+
+            <div class="col-12 mt-5">
+
+              <img src="assets/pepper.png" class="img-fluid w-100" alt="" style="height: 450px">
+
+            </div>
+
+
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </div>
+
+
+    <div class="container-fluid bg-white" style="position: relative">
+
+      <img src="assets/bg.png" alt="" style="position: absolute; top: 0; right: 0;">
+
+      <section class="container bg-white pt-5">
+
+        <h2 class="text-black fw-bold" style="font-size: 54px">Our Menu</h2>
+
+        <p class="text-dark col-4">This is a section of your menu. Give your section a brief description</p>
+
+        <div class="mt-5 row gap-5 justify-content-between">
+
+          <div class="col-12 col-md-5">
+
+            <div class="col-12 d-flex justify-content-end fw-bold h2 border border-3 border-black border-top-0 border-end-0 border-start-0" style="border-bottom-style: dotted!important;">$20</div>
+
+            <h2 class="col-12 mt-4 text-black">Deep Sea Snow White Cod Fillet</h2>
+
+            <p class="mt-4 text-black">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+
+          </div>
+
+          <div class="col-12 col-md-5">
+
+            <div class="col-12 d-flex justify-content-end fw-bold h2 border border-3 border-black border-top-0 border-end-0 border-start-0" style="border-bottom-style: dotted!important;">$20</div>
+
+            <h2 class="col-12 mt-4 text-black">Deep Sea Snow White Cod Fillet</h2>
+
+            <p class="mt-4 text-black">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+
+          </div>
+
+          <div class="col-12 col-md-5">
+
+            <div class="col-12 d-flex justify-content-end fw-bold h2 border border-3 border-black border-top-0 border-end-0 border-start-0" style="border-bottom-style: dotted!important;">$20</div>
+
+            <h2 class="col-12 mt-4 text-black">Deep Sea Snow White Cod Fillet</h2>
+
+            <p class="mt-4 text-black">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+
+          </div>
+
+          <div class="col-12 col-md-5">
+
+            <div class="col-12 d-flex justify-content-end fw-bold h2 border border-3 border-black border-top-0 border-end-0 border-start-0" style="border-bottom-style: dotted!important;">$20</div>
+
+            <h2 class="col-12 mt-4 text-black">Deep Sea Snow White Cod Fillet</h2>
+
+            <p class="mt-4 text-black">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </div>
+
+    <div class="container-fluid pt-5 mt-5" style="background:#EBF0E4">
+
+      <div class="container">
+
+        <img src="assets/cook.png" alt="" class="w-100 img-fluid">
+        
+      </div>
+
+    </div>
+
+
+    <div class="container-fluid pt-5 mb-5">
+
+      <div class="container d-flex gap-5 flex-column flex-md-row">
+
+
+        <div class="card mb-3 shadow-0 align-items-center d-flex flex-column">
+          <img src="assets/CircleIcon.svg" class="card-img-top img-fluid w-50" alt="Wild Landscape"/>
+          <div class="card-body">
+            <h5 class="card-title text-center">Premium Quality</h5>
+            <p class="card-text text-center">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque congue arcu
+            </p>
+          </div>
+        </div>
+
+        <div class="card mb-3 shadow-0 align-items-center d-flex flex-column">
+          <img src="assets/CircleIcon.svg" class="card-img-top img-fluid w-50" alt="Wild Landscape"/>
+          <div class="card-body">
+            <h5 class="card-title text-center">Premium Quality</h5>
+            <p class="card-text text-center">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque congue arcu
+            </p>
+          </div>
+        </div>
+
+        <div class="card mb-3 shadow-0 align-items-center d-flex flex-column">
+          <img src="assets/CircleIcon.svg" class="card-img-top img-fluid w-50" alt="Wild Landscape"/>
+          <div class="card-body">
+            <h5 class="card-title text-center">Premium Quality</h5>
+            <p class="card-text text-center">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque congue arcu
+            </p>
+          </div>
+        </div>
+
+
+
+      </div>
+
+    </div>
+
+    <div class="container-fluid pt-5 mb-5">
+
+      <div class="container d-flex flex-column flex-md-row gap-5">
+
+        <div class="w-100 d-flex flex-column gap-4">
+
+          <img src="assets/Feature Image.svg" alt="" class="img-fluid w-100">
+
+          <div class="w-100 p-5">
+
+            <div class="w-100 d-flex flex-row align-items-center justify-content-start">
+
+              <img src="assets/Avatar.svg" alt="">
+
+              <span>Julie Christie . October 17,2021 . 3:33 pm . 2 comments</span>
+              
+            </div>
+
+            <div class="w-100 row-gap-2">
+
+              <h4 class="text-black col-8" style="font-size: 35px;border-bottom: 2px dotted black">Fruit and vegetables and protection against diseases</h4>
+
+              <p class="text-dark col-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+
+            </div>
+
+            <div class="w-100">
+
+              <span>Read More</span>
+
+              <img src="assets/Icon_arrow-right.svg" alt="#">
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="w-100 d-flex flex-column gap-4">
+
+          <img src="assets/Feature Image.svg" alt="" class="img-fluid w-100">
+
+          <div class="w-100 p-5">
+
+            <div class="w-100 d-flex flex-row align-items-center justify-content-start">
+
+              <img src="assets/Avatar.svg" alt="">
+
+              <span>Julie Christie . October 17,2021 . 3:33 pm . 2 comments</span>
+
+            </div>
+
+            <div class="w-100 row-gap-2">
+
+              <h4 class="text-black col-8" style="font-size: 35px;border-bottom: 2px dotted black">Fruit and vegetables and protection against diseases</h4>
+
+              <p class="text-dark col-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+
+            </div>
+
+            <div class="w-100">
+
+              <span>Read More</span>
+
+              <img src="assets/Icon_arrow-right.svg" alt="#">
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="container-fluid pt-5" style="background:#EBF0E4">
+
+
+      <div class="container">
+
+        <div class="mt-5 mb-5 col-12 d-flex flex-column gap-2 align-items-center justify-content-center">
+
+          <h2 class="text-black fw-bold text-center" style="font-size: 55px;" >Make a Reservation</h2>
+
+          <p class="text-dark mb-5">Get in touch with restaurant</p>
+
+        </div>
+
+
+        <form action="#" method="post" enctype="multipart/form-data" class="pb-5">
+
+          <div class="d-flex gap-3 flex-md-row flex-column">
+
+            <div class="col">
+
+              <input type="date" class="form-control rounded-0 border-black h-100 bg-transparent">
+
+            </div>
+
+            <div class="col">
+
+              <select class="form-select rounded-0 border-black h-100 bg-transparent">
+                <option value="1">1</option>
+                <option value=2>2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+
+            </div>
+
+            <div class="col">
+
+              <select class="form-select rounded-0 border-black h-100 bg-transparent">
+                <option value="1">1</option>
+                <option value=2>2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+
+            </div>
+
+          </div>
+
+
+        </form>
+
+      </div>
+
+
+    </div>
+
+
+    <div class="container-fluid pt-5 mb-5">
+
+      <div class="container">
+
+        <div class="col-6 offset-3 mb-5">
+
+          <h1 class="text-center text-black" style="font-size: 65px">Calories Energy Balance</h1>
+
+          <p class="text-center text-dark">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+        </div>
+
+        <div class="d-flex flex-md-row flex-column w-100 gap-4">
+
+          <div>
+            <img src="assets/start.svg" alt="" class="img-fluid w-100">
+          </div>
+
+          <div>
+            <img src="assets/main.svg" alt="" class="img-fluid w-100">
+          </div>
+
+          <div>
+            <img src="assets/soups.svg" alt="" class="img-fluid w-100">
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+
+
+
+
+    <div class="container-fluid pt-5" style="background:#233000">
+
+      <div class="container">
+
+
+        <!-- Footer -->
+        <footer class="text-center text-lg-start  text-white bg-transparent">
+
+
+          <!-- Section: Links  -->
+          <section class="bg-transparent">
+            <div class="text-center text-md-start mt-5">
+              <!-- Grid row -->
+              <div class="row mt-3">
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 bg-transparent">
+                  <!-- Content -->
+                  <h6 class="text-uppercase fw-bold mb-4 h-100 d-flex align-items-center justify-content-center" style="font-size: 50px">
+                    FoodZero.
+                  </h6>
+
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                  <!-- Links -->
+                  <h6 class="text-uppercase fw-bold mb-4">
+                    Products
+                  </h6>
+                  <p>
+                    <a href="#!" class="text-reset">Angular</a>
+                  </p>
+                  <p>
+                    <a href="#!" class="text-reset">React</a>
+                  </p>
+                  <p>
+                    <a href="#!" class="text-reset">Vue</a>
+                  </p>
+                  <p>
+                    <a href="#!" class="text-reset">Laravel</a>
+                  </p>
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                  <!-- Links -->
+                  <h6 class="text-uppercase fw-bold mb-4">
+                    Useful links
+                  </h6>
+                  <p>
+                    <a href="#!" class="text-reset">Pricing</a>
+                  </p>
+                  <p>
+                    <a href="#!" class="text-reset">Settings</a>
+                  </p>
+                  <p>
+                    <a href="#!" class="text-reset">Orders</a>
+                  </p>
+                  <p>
+                    <a href="#!" class="text-reset">Help</a>
+                  </p>
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                  <!-- Links -->
+                  <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+                  <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
+                  <p>
+                    <i class="fas fa-envelope me-3"></i>
+                    info@example.com
+                  </p>
+                  <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+                  <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+                </div>
+                <!-- Grid column -->
+              </div>
+              <!-- Grid row -->
+            </div>
+          </section>
+          <!-- Section: Links  -->
+
+          <!-- Copyright -->
+          <div class="text-center p-4 d-flex justify-content-between">
+            © 2021 Copyright:
+
+
+            <!-- Section: Social media -->
+            <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+              <!-- Right -->
+              <div>
+                <a href="" class="me-4 text-reset">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                  <i class="fab fa-google"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+              <!-- Right -->
+            </section>
+            <!-- Section: Social media -->
+
+          </div>
+          <!-- Copyright -->
+        </footer>
+        <!-- Footer -->
+
+
+      </div>
+
+
+    </div>
+
+
+
+
+    <!-- End your project here-->
+
+    <!-- MDB -->
+    
+    <!-- Custom scripts -->
+    <script type="module"></script>
+  </body>
+</html>
